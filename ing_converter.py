@@ -1,5 +1,11 @@
+#!/usr/bin/env python3
+
 import sys
 import csv
+
+if len(sys.argv) < 3:
+    print('Not enough parameters.\n\t Usage: ./ing_parser.py <ing_export> <parsed_result>')
+    sys.exit(1)
 
 filename = sys.argv[1]
 parsedFilename = sys.argv[2]
