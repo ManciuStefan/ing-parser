@@ -31,8 +31,10 @@ with open(filename) as csv_file:
                 sourceDest = '-'
                 if len(row[5]) > 0:
                     sum = '-' + row[5]
+                elif len(row[6]) > 0:
+                    sum = '-' + row[6]
                 else:
-                    sum = '+' + row[6]
+                    sum = '+' + row[8]
             else:
                 if row[3].startswith('Terminal') or row[3].startswith('Ordonator') or row[3].startswith('Beneficiar'):
                     aux, sourceDest = row[3].split(':')
